@@ -16,4 +16,10 @@ describe('viewport()', function () {
             cb(assert.strictEqual(res.length, 5));
         });
     });
+
+    it('should return all viewports', function (cb) {
+        viewport(function (err, res) {
+            cb(assert(res.length > 50));
+        });
+    });
 });
