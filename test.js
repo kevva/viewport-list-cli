@@ -6,8 +6,7 @@ var viewport = require('./');
 
 describe('viewport()', function () {
     it('should return two viewports', function (cb) {
-        viewport('iphone4s', function (err, res) {
-            console.log(res);
+        viewport('iphone4', function (err, res) {
             cb(assert.strictEqual(res.length, 2));
         });
     });
