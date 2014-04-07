@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
+var csv = require('to-csv');
 var input = process.argv.slice(2);
 var pkg = require('./package.json');
 var stdin = require('get-stdin');
@@ -51,7 +52,7 @@ function run(input) {
             throw err;
         }
 
-        console.log(devices);
+        console.log(csv(devices));
     });
 }
 
