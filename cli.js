@@ -46,23 +46,13 @@ if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
  */
 
 function run(input) {
-    if (input.length === 0) {
-        viewport(function (err, devices) {
-            if (err) {
-                throw err;
-            }
+    viewport(input, function (err, devices) {
+        if (err) {
+            throw err;
+        }
 
-            console.log(devices);
-        });
-    } else {
-        viewport(input, function (err, devices) {
-            if (err) {
-                throw err;
-            }
-
-            console.log(devices);
-        });
-    }
+        console.log(devices);
+    });
 }
 
 /**
