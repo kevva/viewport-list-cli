@@ -1,4 +1,4 @@
-# viewport-list [![Build Status](https://travis-ci.org/kevva/viewport-list.png?branch=master)](http://travis-ci.org/kevva/viewport-list)
+# viewport-list [![Build Status](https://travis-ci.org/kevva/viewport-list.svg?branch=master)](https://travis-ci.org/kevva/viewport-list)
 
 > Return a list of devices and their viewports
 
