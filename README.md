@@ -21,13 +21,9 @@ viewport('iphone4s', function (err, items) {
 
 ## CLI
 
-You can also use it as a CLI app by installing it globally:
-
 ```bash
 $ npm install --global viewport-list
 ```
-
-### Usage
 
 ```bash
 $ viewport --help
@@ -44,4 +40,4 @@ Example
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Kevin Mårtensson](https://github.com/kevva)
+MIT © [Kevin Mårtensson](https://github.com/kevva)
