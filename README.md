@@ -13,9 +13,9 @@ $ npm install --save viewport-list
 ```js
 var viewport = require('viewport-list');
 
-viewport('iphone4s', function (err, items) {
+viewport('iphone 4s', function (err, items) {
     console.log(items);
-    // => [{ name: 'iphone4s', platform: 'iOS', os: '4.3.5', size: '320x480', release: '2011-10' }]
+    // => [{ name: 'iphone 4s', platform: 'iOS', os: '4.3.5', size: '320x480', release: '2011-10' }]
 });
 ```
 
