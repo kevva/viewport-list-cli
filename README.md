@@ -10,6 +10,8 @@ $ npm install --save viewport-list
 
 ## Usage
 
+Pass in a optional keyword which is a device name from [this list](http://viewportsizes.com).
+
 ```js
 var viewport = require('viewport-list');
 
