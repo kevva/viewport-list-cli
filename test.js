@@ -1,25 +1,31 @@
-/*global describe, it */
 'use strict';
 
-var assert = require('assert');
+var test = require('ava');
 var viewport = require('./');
 
-describe('viewport()', function () {
-    it('should return viewports', function (cb) {
-        viewport('iphone 4', function (err, res) {
-            cb(assert.strictEqual(res.length, 2));
-        });
-    });
+test('return viewports', function (t) {
+    t.plan(2);
 
-    it('should return viewports using an array of keywords', function (cb) {
-        viewport(['iphone 4', 'iphone 5'], function (err, res) {
-            cb(assert.strictEqual(res.length, 5));
-        });
+    viewport('iphone 4', function (err, res) {
+        t.assert(!err);
+        t.assert(res.length === 2);
     });
+});
 
-    it('should return all viewports', function (cb) {
-        viewport(function (err, res) {
-            cb(assert(res.length > 50));
-        });
+test('return viewports using an array of keywords', function (t) {
+    t.plan(2);
+
+    viewport(['iphone 4', 'iphone 5'], function (err, res) {
+        t.assert(!err);
+        t.assert(res.length === 5);
+    });
+});
+
+test('return all viewports', function (t) {
+    t.plan(2);
+
+    viewport(function (err, res) {
+        t.assert(!err);
+        t.assert(res.length > 50);
     });
 });
