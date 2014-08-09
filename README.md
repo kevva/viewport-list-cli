@@ -16,6 +16,10 @@ Pass in a optional keyword which is a device name from [this list](http://viewpo
 var viewport = require('viewport-list');
 
 viewport('iphone 4s', function (err, items) {
+    if (err) {
+        throw err;
+    }
+    
     console.log(items);
     // => [{ name: 'iphone 4s', platform: 'iOS', os: '4.3.5', size: '320x480', release: '2011-10' }]
 });
