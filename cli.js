@@ -29,8 +29,7 @@ function help() {
  */
 
 if (input.indexOf('-h') !== -1 || input.indexOf('--help') !== -1) {
-    help();
-    return;
+    return help();
 }
 
 /**
@@ -38,8 +37,7 @@ if (input.indexOf('-h') !== -1 || input.indexOf('--help') !== -1) {
  */
 
 if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
-    console.log(pkg.version);
-    return;
+    return console.log(pkg.version);
 }
 
 /**
@@ -49,7 +47,8 @@ if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
 function run(input) {
     viewport(input, function (err, devices) {
         if (err) {
-            throw err;
+            console.error(err);
+            process.exit(1);
         }
 
         console.log(csv(devices));
