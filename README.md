@@ -15,7 +15,7 @@ Pass in a optional keyword which is a device name from [this list](http://viewpo
 ```js
 var viewport = require('viewport-list');
 
-viewport('iphone 4s', function (err, items) {
+viewport(['iphone 4s'], function (err, items) {
     if (err) {
         throw err;
     }

@@ -6,15 +6,6 @@ var viewport = require('./');
 test('return viewports', function (t) {
     t.plan(2);
 
-    viewport('iphone 4', function (err, res) {
-        t.assert(!err);
-        t.assert(res.length === 2);
-    });
-});
-
-test('return viewports using an array of keywords', function (t) {
-    t.plan(2);
-
     viewport(['iphone 4', 'iphone 5'], function (err, res) {
         t.assert(!err);
         t.assert(res.length === 5);
