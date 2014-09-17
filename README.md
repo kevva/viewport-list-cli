@@ -25,6 +25,31 @@ viewport(['iphone 4s'], function (err, items) {
 });
 ```
 
+## API
+
+### viewport([items], [opts], cb)
+
+#### items
+
+Type: `Array`  
+Default: `[]`
+
+An array of device names to fetch.
+
+#### opts
+
+Type: `Object`  
+Default: `{}`
+
+Any of the [http.request](http://nodejs.org/api/http.html#http_http_request_options_callback) options.
+
+#### cb(err, ret)
+
+Type: `Function`  
+Default: `undefined`
+
+Returns an array of object containing devices and their attributes.
+
 ## CLI
 
 ```bash
