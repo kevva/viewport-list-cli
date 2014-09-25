@@ -60,13 +60,12 @@ $ npm install --global viewport-list
 $ viewport --help
 
 Usage
-  $ viewport [device]
-  $ cat <file> | viewport [device]
+  viewport [device]
+  cat <file> | viewport [device]
 
 Example
-  $ viewport
-  $ viewport iphone4 iphone5
-  $ cat devices.txt | viewport
+  viewport iphone4 iphone5
+  cat devices.txt | viewport
 ```
 
 ## License

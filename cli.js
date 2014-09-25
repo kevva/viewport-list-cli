@@ -12,16 +12,18 @@ var viewport = require('./');
  */
 
 function help() {
-	console.log(pkg.description);
-	console.log('');
-	console.log('Usage');
-	console.log('  $ viewport [device]');
-	console.log('  $ cat <file> | viewport [device]');
-	console.log('');
-	console.log('Example');
-	console.log('  $ viewport');
-	console.log('  $ viewport iphone4 iphone5');
-	console.log('  $ cat devices.txt | viewport');
+	console.log([
+		'',
+		'  ' + pkg.description,
+		'',
+		'  Usage',
+		'    viewport [device]',
+		'    cat <file> | viewport',
+		'',
+		'  Example',
+		'    viewport iphone4 iphone5',
+		'    cat devices.txt | viewport'
+	].join('\n'));
 }
 
 /**
