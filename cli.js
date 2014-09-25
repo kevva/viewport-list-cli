@@ -12,16 +12,16 @@ var viewport = require('./');
  */
 
 function help() {
-    console.log(pkg.description);
-    console.log('');
-    console.log('Usage');
-    console.log('  $ viewport [device]');
-    console.log('  $ cat <file> | viewport [device]');
-    console.log('');
-    console.log('Example');
-    console.log('  $ viewport');
-    console.log('  $ viewport iphone4 iphone5');
-    console.log('  $ cat devices.txt | viewport');
+	console.log(pkg.description);
+	console.log('');
+	console.log('Usage');
+	console.log('  $ viewport [device]');
+	console.log('  $ cat <file> | viewport [device]');
+	console.log('');
+	console.log('Example');
+	console.log('  $ viewport');
+	console.log('  $ viewport iphone4 iphone5');
+	console.log('  $ cat devices.txt | viewport');
 }
 
 /**
@@ -29,7 +29,7 @@ function help() {
  */
 
 if (input.indexOf('-h') !== -1 || input.indexOf('--help') !== -1) {
-    return help();
+	return help();
 }
 
 /**
@@ -37,7 +37,7 @@ if (input.indexOf('-h') !== -1 || input.indexOf('--help') !== -1) {
  */
 
 if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
-    return console.log(pkg.version);
+	return console.log(pkg.version);
 }
 
 /**
@@ -45,14 +45,14 @@ if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
  */
 
 function run(input) {
-    viewport(input, function (err, devices) {
-        if (err) {
-            console.error(err);
-            process.exit(1);
-        }
+	viewport(input, function (err, devices) {
+		if (err) {
+			console.error(err);
+			process.exit(1);
+		}
 
-        console.log(csv(devices));
-    });
+		console.log(csv(devices));
+	});
 }
 
 /**
@@ -60,10 +60,10 @@ function run(input) {
  */
 
 if (process.stdin.isTTY) {
-    run(input);
+	run(input);
 } else {
-    stdin(function (data) {
-        [].push.apply(input, data.trim().split('\n'));
-        run(input);
-    });
+	stdin(function (data) {
+		[].push.apply(input, data.trim().split('\n'));
+		run(input);
+	});
 }
