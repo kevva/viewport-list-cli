@@ -45,8 +45,7 @@ Any of the [http.request](http://nodejs.org/api/http.html#http_http_request_opti
 
 #### cb(err, ret)
 
-Type: `Function`  
-Default: `undefined`
+Type: `Function`
 
 Returns an array of object containing devices and their attributes.
 
@@ -57,15 +56,15 @@ $ npm install --global viewport-list
 ```
 
 ```bash
-$ viewport --help
+$ viewport-list --help
 
 Usage
-  viewport [device]
-  cat <file> | viewport [device]
+  viewport-list [device]
+  viewport-list < <file>
 
 Example
-  viewport iphone4 iphone5
-  cat devices.txt | viewport
+  viewport-list iphone4 iphone5
+  viewport-list < devices.txt
 ```
 
 ## License

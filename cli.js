@@ -2,8 +2,7 @@
 'use strict';
 
 var csv = require('to-csv');
-var input = process.argv.slice(2);
-var pkg = require('./package.json');
+var meow = require('meow');
 var stdin = require('get-stdin');
 var viewport = require('./');
 
@@ -11,36 +10,17 @@ var viewport = require('./');
  * Help screen
  */
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  viewport-list [device]',
+		'  viewport-list < <file>',
 		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    viewport [device]',
-		'    cat <file> | viewport',
-		'',
-		'  Example',
-		'    viewport iphone4 iphone5',
-		'    cat devices.txt | viewport'
-	].join('\n'));
-}
-
-/**
- * Show help
- */
-
-if (input.indexOf('-h') !== -1 || input.indexOf('--help') !== -1) {
-	return help();
-}
-
-/**
- * Show package version
- */
-
-if (input.indexOf('-v') !== -1 || input.indexOf('--version') !== -1) {
-	return console.log(pkg.version);
-}
+		'Example',
+		'  viewport-list iphone4 iphone5',
+		'  viewport-list < devices.txt'
+	].join('\n')
+});
 
 /**
  * Run
@@ -62,10 +42,10 @@ function run(input) {
  */
 
 if (process.stdin.isTTY) {
-	run(input);
+	run(cli.input);
 } else {
 	stdin(function (data) {
-		[].push.apply(input, data.trim().split('\n'));
-		run(input);
+		[].push.apply(cli.input, data.trim().split('\n'));
+		run(cli.input);
 	});
 }
