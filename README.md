@@ -36,13 +36,6 @@ Default: `[]`
 
 An array of device names to fetch.
 
-#### opts
-
-Type: `Object`  
-Default: `{}`
-
-Any of the [http.request](http://nodejs.org/api/http.html#http_http_request_options_callback) options.
-
 #### cb(err, ret)
 
 Type: `Function`
