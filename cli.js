@@ -6,10 +6,6 @@ var meow = require('meow');
 var stdin = require('get-stdin');
 var viewport = require('./');
 
-/**
- * Help screen
- */
-
 var cli = meow({
 	help: [
 		'Usage',
@@ -22,10 +18,6 @@ var cli = meow({
 	].join('\n')
 });
 
-/**
- * Run
- */
-
 function run(input) {
 	viewport(input, function (err, devices) {
 		if (err) {
@@ -36,10 +28,6 @@ function run(input) {
 		console.log(csv(devices));
 	});
 }
-
-/**
- * Apply arguments
- */
 
 if (process.stdin.isTTY) {
 	run(cli.input);

@@ -1,4 +1,4 @@
-# viewport-list [![Build Status](https://travis-ci.org/kevva/viewport-list.svg?branch=master)](https://travis-ci.org/kevva/viewport-list)
+# viewport-list [![Build Status](http://img.shields.io/travis/kevva/viewport-list.svg?style=flat)](https://travis-ci.org/kevva/viewport-list)
 
 > Return a list of devices and their viewports
 
@@ -21,7 +21,7 @@ viewport(['iphone 4s'], function (err, items) {
 	}
 	
 	console.log(items);
-	// => [{ name: 'iphone 4s', platform: 'iOS', os: '4.3.5', size: '320x480', release: '2011-10' }]
+	//=> [{name: 'iphone 4s', platform: 'iOS', os: '4.3.5', size: '320x480', release: '2011-10'}]
 });
 ```
 
@@ -52,12 +52,12 @@ $ npm install --global viewport-list
 $ viewport-list --help
 
 Usage
-  viewport-list [device]
-  viewport-list < <file>
+  $ viewport-list [device]
+  $ viewport-list < <file>
 
 Example
-  viewport-list iphone4 iphone5
-  viewport-list < devices.txt
+  $ viewport-list iphone4 iphone5
+  $ viewport-list < devices.txt
 ```
 
 ## License
