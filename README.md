@@ -27,7 +27,7 @@ viewport(['iphone 4s'], function (err, items) {
 
 ## API
 
-### viewport([items], [opts], cb)
+### viewport([items], cb)
 
 #### items
 
