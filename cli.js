@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-var csv = require('to-csv');
 var meow = require('meow');
-var stdin = require('get-stdin');
+var getStdin = require('get-stdin');
+var toCsv = require('to-csv');
 var viewport = require('./');
 
 var cli = meow({
@@ -21,18 +21,18 @@ var cli = meow({
 function run(input) {
 	viewport(input, function (err, devices) {
 		if (err) {
-			console.error(err);
+			console.error(err.message);
 			process.exit(1);
 		}
 
-		console.log(csv(devices));
+		console.log(toCsv(devices));
 	});
 }
 
 if (process.stdin.isTTY) {
 	run(cli.input);
 } else {
-	stdin(function (data) {
+	getStdin(function (data) {
 		[].push.apply(cli.input, data.trim().split('\n'));
 		run(cli.input);
 	});
