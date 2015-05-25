@@ -1,5 +1,4 @@
 'use strict';
-
 var spawn = require('child_process').spawn;
 var test = require('ava');
 var viewport = require('./');
