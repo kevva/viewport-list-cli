@@ -14,7 +14,7 @@ var cli = meow({
 		'Example',
 		'  $ viewport-list iphone4 iphone5',
 		'  $ viewport-list < devices.txt'
-	].join('\n')
+	]
 });
 
 function run(input) {
