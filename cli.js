@@ -3,7 +3,7 @@
 var meow = require('meow');
 var getStdin = require('get-stdin');
 var toCsv = require('to-csv');
-var viewport = require('./');
+var viewport = require('viewport-list');
 
 var cli = meow({
 	help: [

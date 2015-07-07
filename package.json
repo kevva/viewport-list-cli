@@ -1,0 +1,43 @@
+{
+  "name": "viewport-list-cli",
+  "version": "1.0.0",
+  "description": "Return a list of devices and their viewports",
+  "license": "MIT",
+  "repository": "kevva/viewport-list-cli",
+  "author": {
+    "email": "kevinmartensson@gmail.com",
+    "name": "Kevin Mårtensson",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "viewport-list": "cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "app",
+    "cli",
+    "cli-app",
+    "device",
+    "json",
+    "resolution",
+    "size",
+    "viewport"
+  ],
+  "dependencies": {
+    "get-stdin": "^4.0.1",
+    "meow": "^3.3.0",
+    "to-csv": "^0.0.3",
+    "viewport-list": "^3.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
