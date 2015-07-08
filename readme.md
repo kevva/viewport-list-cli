@@ -2,6 +2,11 @@
 
 > Return a list of devices and their viewports
 
+```
+viewport-list iphone4 --pretty
+```
+
+![screenshot](screenshot.png)
 
 ## Install
 
@@ -22,6 +27,7 @@ $ viewport-list --help
   Example
     $ viewport-list iphone4 iphone5
     $ viewport-list < devices.txt
+    $ viewport-list iphone4 --pretty
 ```
 
 
