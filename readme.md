@@ -2,6 +2,11 @@
 
 > Return a list of devices and their viewports
 
+```bash
+$ viewport-list iphone4 --pretty
+```
+
+![screenshot](screenshot.png)
 
 ## Install
 
@@ -16,12 +21,15 @@ $ npm install --global viewport-list-cli
 $ viewport-list --help
 
   Usage
-    $ viewport-list [device]
+    $ viewport-list [device] [--pretty]
     $ viewport-list < <file>
 
   Example
     $ viewport-list iphone4 iphone5
     $ viewport-list < devices.txt
+    $ viewport-list iphone4 --pretty
+    $ viewport-list iphone4 -p
+    $ viewport-list -p < devices.txt
 ```
 
 
