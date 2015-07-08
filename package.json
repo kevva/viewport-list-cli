@@ -32,10 +32,12 @@
     "viewport"
   ],
   "dependencies": {
+    "cli-table": "^0.3.1",
     "get-stdin": "^4.0.1",
     "meow": "^3.3.0",
     "to-csv": "^0.0.3",
-    "viewport-list": "^3.0.1"
+    "viewport-list": "^3.0.1",
+    "window-size": "^0.1.2"
   },
   "devDependencies": {
     "ava": "^0.0.4"
