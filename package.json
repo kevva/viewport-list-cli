@@ -34,6 +34,7 @@
   "dependencies": {
     "get-stdin": "^4.0.1",
     "meow": "^3.3.0",
+    "obj-to-table": "^1.0.0",
     "to-csv": "^0.0.3",
     "viewport-list": "^3.0.1"
   },

@@ -22,6 +22,9 @@ $ viewport-list --help
   Example
     $ viewport-list iphone4 iphone5
     $ viewport-list < devices.txt
+
+  Options
+    -p, --pretty    Print the results in a table
 ```
 
 
