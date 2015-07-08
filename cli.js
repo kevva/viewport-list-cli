@@ -10,12 +10,16 @@ var viewport = require('viewport-list');
 var cli = meow({
 	help: [
 		'Usage',
-		'  $ viewport-list [device]',
+		'  $ viewport-list [device] [--pretty]',
 		'  $ viewport-list < <file>',
 		'',
 		'Example',
 		'  $ viewport-list iphone4 iphone5',
-		'  $ viewport-list < devices.txt'
+		'  $ viewport-list < devices.txt',
+		'  $ viewport-list iphone4 --pretty',
+		'  $ viewport-list iphone4 -p',
+		'  $ viewport-list -p < devices.txt',
+		''
 	]
 });
 
@@ -26,7 +30,7 @@ function run(input, flags) {
 			process.exit(1);
 		}
 
-		if (flags && (flags.pretty || flags.p)){
+		if (flags && (flags.pretty || flags.p)) {
 			var colWidth = Math.floor(windowSize.width / 6);
 			var table = new Table({
 			    head: ['name', 'platform', 'os', 'size', 'release']
@@ -50,6 +54,6 @@ if (process.stdin.isTTY) {
 } else {
 	getStdin(function (data) {
 		[].push.apply(cli.input, data.trim().split('\n'));
-		run(cli.input);
+		run(cli.input, cli.flags);
 	});
 }
