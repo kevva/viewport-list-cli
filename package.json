@@ -16,7 +16,7 @@
     "viewport-list": "cli.js"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js"
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "ava": "*",
-    "execa": "^0.1.1"
+    "execa": "^0.1.1",
+    "xo": "*"
   }
 }
