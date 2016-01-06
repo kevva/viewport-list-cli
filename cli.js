@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var getStdin = require('get-stdin');
-var objToTable = require('obj-to-table');
-var toCsv = require('to-csv');
-var viewport = require('viewport-list');
+const meow = require('meow');
+const getStdin = require('get-stdin');
+const objToTable = require('obj-to-table');
+const toCsv = require('to-csv');
+const viewport = require('viewport-list');
 
-var cli = meow({
+const cli = meow({
 	help: [
 		'Usage',
 		'  $ viewport-list [device]',
@@ -22,12 +22,7 @@ var cli = meow({
 }, {alias: {p: 'pretty'}});
 
 function run(input, opts) {
-	viewport(input, function (err, devices) {
-		if (err) {
-			console.error(err.message);
-			process.exit(1);
-		}
-
+	viewport(input).then(devices => {
 		if (opts.pretty) {
 			console.log(objToTable(devices).toString());
 			return;
@@ -40,7 +35,7 @@ function run(input, opts) {
 if (process.stdin.isTTY) {
 	run(cli.input, cli.flags);
 } else {
-	getStdin(function (data) {
+	getStdin().then(data => {
 		[].push.apply(cli.input, data.trim().split('\n'));
 		run(cli.input, cli.flags);
 	});

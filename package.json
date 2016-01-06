@@ -10,7 +10,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "bin": {
     "viewport-list": "cli.js"
@@ -32,11 +32,11 @@
     "viewport"
   ],
   "dependencies": {
-    "get-stdin": "^4.0.1",
+    "get-stdin": "^5.0.1",
     "meow": "^3.3.0",
     "obj-to-table": "^1.0.0",
-    "to-csv": "^0.0.3",
-    "viewport-list": "^3.0.1"
+    "to-csv": "^0.1.0",
+    "viewport-list": "^4.0.1"
   },
   "devDependencies": {
     "ava": "*",
