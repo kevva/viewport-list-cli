@@ -1,12 +1,12 @@
-'use strict';
-var childProcess = require('child_process');
-var test = require('ava');
+import execa from 'execa';
+import test from 'ava';
 
-test(function (t) {
-	t.plan(2);
+test('show version', async t => {
+	const ret = await execa('./cli.js', ['--version']);
+	t.is(require('./package.json').version, ret.stdout);
+});
 
-	childProcess.execFile('./cli.js', ['--version'], {cwd: __dirname}, function (err, stdout) {
-		t.assert(!err, err);
-		t.assert(stdout.trim() === require('./package.json').version);
-	});
+test('show help screen', async t => {
+	const ret = await execa('./cli.js', ['--help']);
+	t.regexTest(/Return a list of devices and their viewports/, ret.stdout);
 });

@@ -16,7 +16,7 @@
     "viewport-list": "cli.js"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "ava"
   },
   "files": [
     "cli.js"
@@ -39,6 +39,7 @@
     "viewport-list": "^3.0.1"
   },
   "devDependencies": {
-    "ava": "^0.0.4"
+    "ava": "*",
+    "execa": "^0.1.1"
   }
 }
