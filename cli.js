@@ -4,7 +4,7 @@ const meow = require('meow');
 const getStdin = require('get-stdin');
 const objToTable = require('obj-to-table');
 const toCsv = require('to-csv');
-const viewport = require('viewport-list');
+const viewportList = require('viewport-list');
 
 const cli = meow({
 	help: [
@@ -22,7 +22,7 @@ const cli = meow({
 }, {alias: {p: 'pretty'}});
 
 function run(input, opts) {
-	viewport(input).then(devices => {
+	viewportList(input).then(devices => {
 		if (opts.pretty) {
 			console.log(objToTable(devices).toString());
 			return;

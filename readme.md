@@ -28,6 +28,11 @@ $ viewport-list --help
 ```
 
 
+## Related
+
+* [viewport-list](https://github.com/kevva/viewport-list) - API for this module
+
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)
